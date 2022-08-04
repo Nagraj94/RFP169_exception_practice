@@ -8,13 +8,13 @@ public class MoodAnalyser {
             return "HAPPY MOOD";
         }
         else {
-            System.out.println("SAD");
+            System.out.println("sad");
             return "SAD MOOD";
         }
     }
 
     public static void main(String[] args) {
         MoodAnalyser moodAnalyser = new MoodAnalyser();
-        moodAnalyser.analyseMood("I'm in happy mood today");
+        moodAnalyser.analyseMood("I'm in sad mood today");
     }
 }
