@@ -1,21 +1,23 @@
 package com.bridgelabz;
 
 public class MoodAnalyser {
+    String message;
 
-    public String analyseMood(String message){
-        try {
-            message.contains("happy mood");
-            System.out.println("happy");
-            return "HAPPY MOOD";
-        }
-        catch (Exception e){
-            System.out.println("sad");
-            return "SAD MOOD";
-        }
+    public MoodAnalyser() {
     }
 
-    public static void main(String[] args) {
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        moodAnalyser.analyseMood("I'm in any mood today");
+    public MoodAnalyser(String message) {
+        this.message = message;
+    }
+
+    public String analyseMood() {
+        try {
+            if (this.message.contains("sad")){
+                return "SAD";
+            }else
+                return "HAPPY";
+        } catch (NullPointerException e){
+            return "HAPPY";
+        }
     }
 }
